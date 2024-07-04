@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100">
+    <div class="flex h-screen">
+        <!-- Sidebar -->
+        <div id="sidebar" class="bg-blue-900 text-white w-64 space-y-6 py-7 px-2 absolute inset-y-0 left-0 transform -translate-x-full md:relative md:translate-x-0 transition duration-200 ease-in-out">
+            <div class="flex justify-between items-center px-4">
+                <a href="#" class="text-white flex items-center space-x-2">
+                    <img src="Logo.png" class="w-28" alt="">
+                </a>
+                <button id="closeBtn" class="text-gray-500 focus:outline-none md:hidden">
+                    <svg class="h-6 w-6 text-white border rounded-lg" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                    </svg>
+                </button>
+            </div>
+            <nav>
+                <a href="#" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700">Home</a>
+                <a href="#" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700">All Leads</a>
+                <a href="#" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700">Ongoing Package</a>
+                <a href="#" class="block py-2.5 px-4 rounded transition duration-200 hover:bg-blue-700">Logout</a>
+            </nav>
+        </div>
+        <!-- Content -->
+        <div class="flex-1 flex flex-col">
+            <header class="flex justify-between items-center bg-white py-4 px-6">
+                <div class="flex items-center">
+                    <button id="menuBtn" class="text-gray-500 focus:outline-none md:hidden">
+                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                        </svg>
+                    </button>
+                </div>
+                <div class="flex">
+                    <h1 class="text-2xl font-semibold text-gray-700 mr-2"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z" />
+                      </svg>
+                      </h1>
+                    <h1 class="text-2xl font-semibold text-gray-700"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8.625 9.75a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H8.25m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0H12m4.125 0a.375.375 0 1 1-.75 0 .375.375 0 0 1 .75 0Zm0 0h-.375m-13.5 3.01c0 1.6 1.123 2.994 2.707 3.227 1.087.16 2.185.283 3.293.369V21l4.184-4.183a1.14 1.14 0 0 1 .778-.332 48.294 48.294 0 0 0 5.83-.498c1.585-.233 2.708-1.626 2.708-3.228V6.741c0-1.602-1.123-2.995-2.707-3.228A48.394 48.394 0 0 0 12 3c-2.392 0-4.744.175-7.043.513C3.373 3.746 2.25 5.14 2.25 6.741v6.018Z" />
+                      </svg>
+                      </h1>
+                </div>
+            </header>
+            <main class="flex-1 p-6">
+                <h2 class="text-5xl font-normal text-gray-800">Hi <span class="text-blue-800 font-extrabold md:font-bold">Hitesh</span>, </h2>
+                <p class="text-sm md:text-lg">Let's make your day a new beginning and energy.</p>
+                <div class="mt-3 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+                    <div class="bg-purple-300 p-4 rounded-lg shadow-lg border text-gray-900">
+                        <div class="flex justify-between">
+                            <div class="">
+                                <img class="w-7 h-7 mr-2" src="newlead.png" alt="">
+                                <h2 class="text-xl text-purple-700 font-bold">New Leads</h2>
+                            </div>
+                            <div><h2 class="text-6xl md:text-6xl -mt-1 font-light md:font-light">100</h2></div>
+                        </div>
+                    </div>
+                    <div class="bg-orange-300 p-4 rounded-lg shadow-lg border text-gray-900">
+                        <div class="flex justify-between">
+                            <div class="">
+                                <img class="w-7 h-7 mr-2" src="lead.png" alt="">
+                                <h2 class="text-xl text-orange-700 font-bold">Open Leads</h2>
+                            </div>
+                            <div><h2 class="text-6xl md:text-6xl -mt-1 font-light md:font-light">100</h2></div>
+                        </div>
+                    </div>
+                    <div class="bg-green-300 p-4 rounded-lg shadow-lg border text-gray-900">
+                        <div class="flex justify-between">
+                            <div class="">
+                                <img class="w-7 h-7 mr-2" src="correct.png" alt="">
+                                <h2 class="text-xl text-green-700 font-bold">Closed Leads</h2>
+                            </div>
+                            <div><h2 class="text-6xl md:text-6xl -mt-1 font-light md:font-light">100</h2></div>
+                        </div>
+                    </div>
+                    <div class="bg-red-300 p-4 rounded-lg shadow-lg border text-gray-900">
+                        <div class="flex justify-between">
+                            <div class="">
+                                <img class="w-7 h-7 mr-2" src="wrong.png" alt="">
+                                <h2 class="text-xl text-red-700 font-bold">Bad Leads</h2>
+                            </div>
+                            <div><h2 class="text-6xl md:text-6xl -mt-1 font-light md:font-light">100</h2></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6">
+                    <div class="bg-yellow-300 p-4 rounded-lg shadow-lg border text-gray-900">
+                        <div class="flex justify-between items-center">
+                            <div class="">
+                                <img class="w-7 h-7 mr-2" src="rupee.png" alt="">
+                                <h2 class="text-xl text-yellow-700 font-bold">Budget Spend</h2>
+                            </div>
+                            <!-- Progress Bar -->
+                            <div class="w-1/2 bg-gray-200 rounded-lg h-5">
+                                <div class="bg-yellow-600 h-full text-xs leading-none py-1 text-center text-white rounded-lg" style="width: 20%;">
+                                    20%
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-blue-300 p-4 rounded-lg shadow-lg border text-gray-900">
+                        <div class="flex justify-between items-center">
+                            <div class="">
+                                <img class="w-7 h-7 mr-2" src="lead-coin.png" alt="">
+                                <h2 class="text-xl text-blue-700 font-bold">Lead Credit</h2>
+                            </div>
+                            <!-- Progress Bar -->
+                            <div class="w-1/2 bg-gray-200 rounded-lg h-5">
+                                <div class="bg-blue-600 h-full text-xs leading-none py-1 text-center text-white rounded-lg" style="width: 50%;">
+                                    300/600
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Add two tables with different colors -->
+                <div class="mt-8 grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- First Table -->
+                    <div class="overflow-x-auto bg-white shadow-lg rounded-lg border border-gray-200">
+                        <table class="min-w-full bg-blue-100">
+                            <h2 class="bg-blue-200 p-4 text-2xl font-bold text-white bg-blue-800">New Leads</h2>
+                            <thead>
+                                <tr class="w-full bg-blue-200">
+                                    <th class="py-2 px-4 text-left">Name</th>
+                                    <th class="py-2 px-4 text-left">Phone</th>
+                                    <th class="py-2 px-4 text-left">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="py-2 px-4">Hiteshi Sharma</td>
+                                    <td class="py-2 px-4">+91 7410852963</td>
+                                    <td class="py-2 px-4">
+                                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                                            Call
+                                        </button>
+                                        <button class="bg-green-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                                            Message
+                                        </button>
+                                        <button class="bg-yellow-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                                            Email
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr class="bg-blue-50">
+                                    <td class="py-2 px-4">Maya Khanna</td>
+                                    <td class="py-2 px-4">+91 8945632110</td>
+                                    <td class="py-2 px-4">
+                                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                                            Call
+                                        </button>
+                                        <button class="bg-green-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                                            Message
+                                        </button>
+                                        <button class="bg-yellow-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                                            Email
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 px-4">Rohan Verma</td>
+                                    <td class="py-2 px-4">+91 8005545589</td>
+                                    <td class="py-2 px-4">
+                                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                                            Call
+                                        </button>
+                                        <button class="bg-green-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                                            Message
+                                        </button>
+                                        <button class="bg-yellow-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                                            Email
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <!-- Second Table -->
+                    <div class="overflow-x-auto bg-white shadow-lg rounded-lg border border-gray-200">
+                        <h2 class="bg-green-200 p-4 text-2xl font-bold text-white bg-green-800">Coverted Clients</h2>
+                        <table class="min-w-full bg-green-100">
+                            <thead>
+                                <tr class="w-full bg-green-200">
+                                    <th class="py-2 px-4 text-left">Name</th>
+                                    <th class="py-2 px-4 text-left">Phone</th>
+                                    <th class="py-2 px-4 text-left">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="py-2 px-4">Data A</td>
+                                    <td class="py-2 px-4">Data B</td>
+                                    <td class="py-2 px-4">
+                                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                                            Call
+                                        </button>
+                                        <button class="bg-green-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                                            Message
+                                        </button>
+                                        <button class="bg-yellow-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                                            Email
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr class="bg-green-50">
+                                    <td class="py-2 px-4">Data D</td>
+                                    <td class="py-2 px-4">Data E</td>
+                                    <td class="py-2 px-4">
+                                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                                            Call
+                                        </button>
+                                        <button class="bg-green-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                                            Message
+                                        </button>
+                                        <button class="bg-yellow-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                                            Email
+                                        </button>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="py-2 px-4">Data G</td>
+                                    <td class="py-2 px-4">+1 455-875(6995)</td>
+                                    <td class="py-2 px-4">
+                                        <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                                            Call
+                                        </button>
+                                        <button class="bg-green-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                                            Message
+                                        </button>
+                                        <button class="bg-yellow-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+                                            Email
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                
+                
+                
+            </main>
+        </div>
+    </div>
+
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const closeBtn = document.getElementById('closeBtn');
+        const sidebar = document.getElementById('sidebar');
+
+        menuBtn.addEventListener('click', () => {
+            sidebar.classList.toggle('-translate-x-full');
+        });
+
+        closeBtn.addEventListener('click', () => {
+            sidebar.classList.add('-translate-x-full');
+        });
+    </script>
+</body>
+</html>
